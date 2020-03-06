@@ -1,9 +1,10 @@
 from django.conf.urls import url
 
-from .views import HomeView, TaskListView, TaskCreateView
+from .views import heroesView, cloudView, sunfloweyView, jesterView
 
 urlpatterns = [
-	url(r'^$', HomeView.as_view(), name='home'),
-	url(r'^tasks$', TaskListView.as_view(), name='task-list'),
-	url(r'^tasks/new$', TaskCreateView.as_view(), name='task_create')
+	url(r'^heroes/$', heroesView.as_view(), name='heroes'),
+	url(r'^heroes/cloud$', cloudView.as_view(), name='Cloud'),
+	url(r'^heroes/sunflowey$', sunfloweyView.as_view(), name='Sunflowey')
+	url(r'^heroes/jester$', jesterView.as_view(), name='Jester')
 ]

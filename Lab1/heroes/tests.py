@@ -15,14 +15,14 @@ class heroCloudTest(TestCase):
 		self.assertTemplateUsed(response, 'detail_cloud.html')
 
 
-class heroSunflowey(TestCase):
+class heroSunfloweyTest(TestCase):
 
 	def test_hero_sunflowey_page_returns_correct_html(self):
 		response = self.client.get('/heroes/sunflowey')
 		self.assertTemplateUsed(response, 'detail_sunflowey.html')
 
 
-class heroJester(TestCase):
+class heroJesterTest(TestCase):
 
 	def test_hero_jester_page_returns_correct_html(self):
 		response = self.client.get('/heroes/jester')
