@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
 		
 		# She sees a list containing three heroes with their corresponding 
 		# names, health points, and damage 
-		self.assertIn(self.browser.get_current_url,
+		self.assertIn(self.browser.current_url,
 			'http://localhost:8000/heroes')
 		
 		# When she selects one of the heroes, she is sent to another page
@@ -34,7 +34,7 @@ class NewVisitorTest(unittest.TestCase):
 
 		self.assertIn('Lore', self.browser.find_element_by_id('hero_lore').text)
 
-		self.assertIn('.png,' self.browser.find_element_by_id('hero_image').get_attribute('src'))
+		self.assertIn('.png', self.browser.find_element_by_id('hero_image').get_attribute('src'))
 		# She spots the page title and header mentions the name of the hero she selected.
 		self.assertIn('Detail - ', self.browser.title)
 		
